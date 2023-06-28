@@ -1,0 +1,10 @@
+br\com\SistemaLoja\model\Loja\Venda.class
+br\com\SistemaLoja\model\Pessoa\Cliente.class
+br\com\SistemaLoja\view\admin\ListaAdms$1.class
+br\com\SistemaLoja\view\admin\ListaAdms$2$1.class
+br\com\SistemaLoja\model\e\EProdutos.class
+br\com\SistemaLoja\view\admin\ListaAdms$2.class
+br\com\SistemaLoja\view\admin\ListaAdms.class
+br\com\SistemaLoja\model\Produto\Produto.class
+br\com\SistemaLoja\model\Pessoa\Pessoa.class
+br\com\SistemaLoja\model\Pessoa\Adm.class

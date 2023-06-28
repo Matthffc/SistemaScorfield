@@ -1,0 +1,97 @@
+try {
+//            // Criar um objeto Cliente com os dados desejados
+//            Cliente cliente = new Cliente();
+//            cliente.setNome("Matheus Nunes");
+//            cliente.setCpf("1234567890");
+//            cliente.setLogin("teste");
+//            cliente.setSenha("teste");
+//            cliente.setEndereco("Rua Roberto de Barros 206 ");
+//            cliente.setTelefone("32988454671");
+//
+//            ClienteDAO cd = new ClienteDAO();
+//            // Chamar o método de inserção
+//            cd.inserir(cliente);
+//
+//            System.out.println("Cliente inserido no banco de dados com sucesso.");
+//        } catch (SQLException | ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+
+
+//        try {
+//            // Criar um objeto Cliente com os dados do cliente a ser removido
+//            Cliente cliente = new Cliente();
+//            cliente.setCpf("1234567890");
+//
+//            // Criar uma instância de DatabaseHelper
+//            ClienteDAO cd = new ClienteDAO();
+//
+//            // Chamar o método de remoção
+//            cd.apagar(cliente);
+//
+//            System.out.println("Cliente removido do banco de dados com sucesso.");
+//        } catch (SQLException | ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+        try {
+            // Criar uma instância de DatabaseHelper
+            ClienteDAO cd = new ClienteDAO();
+
+            // Chamar o método de busca passando a chave do cliente desejado
+            Cliente cliente = cd.Buscar("Matheus Nunes"); // Substitua o número 1 pela chave do cliente que deseja buscar
+
+            if (cliente != null) {
+                System.out.println("Cliente encontrado:");
+                System.out.println("Nome: " + cliente.getNome());
+                System.out.println("CPF: " + cliente.getCpf());
+                System.out.println("Login: " + cliente.getLogin());
+                System.out.println("Senha: " + cliente.getSenha());
+                System.out.println("Endereço: " + cliente.getEndereco());
+                System.out.println("Telefone: " + cliente.getTelefone());
+            } else {
+                System.out.println("Cliente não encontrado.");
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+try {
+            // Criar um objeto Produto com os dados desejados
+            Produto produto = new Produto();
+            produto.setNome("Nome do Produto");
+            produto.setPreco(10.0);
+            produto.setQuantidade(5);
+            produto.seteProdutos("Descrição do Produto");
+
+            // Criar uma instância de ProdutoDAO
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+
+            // Chamar o método de inserção
+            produtoDAO.inserir(produto);
+
+            System.out.println("Produto inserido no banco de dados com sucesso.");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+ try {
+            // Criar uma instância de ProdutoDAO
+            ProdutoDAO produtoDAO = new ProdutoDAO();
+
+            // Criar um objeto Produto com os dados do produto a ser removido
+            Produto produto = new Produto();
+            produto.setNome("Nome do Produto"); // Substitua pelo nome do produto que deseja apagar
+
+            // Chamar o método de remoção
+            produtoDAO.apagar(produto);
+
+            System.out.println("Produto removido do banco de dados com sucesso.");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            // Tratar a exceção adequadamente, exibindo uma mensagem de erro, por exemplo
+            System.out.println("Erro ao remover o produto do banco de dados.");
+        }
